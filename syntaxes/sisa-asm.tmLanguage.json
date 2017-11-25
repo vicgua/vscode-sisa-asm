@@ -1,0 +1,78 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SISA Assembly",
+	"patterns": [
+		{
+			"include": "#operations"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#directives"
+		}
+	],
+	"repository": {
+		"operations": {
+			"patterns": [
+				{
+					"name": "keyword.other.alc-instructions.sisa-asm",
+					"match": "\\b(?i)(AND|OR|XOR|NOT|ADD|SUB|SHA|SHL|CMPLT|CMPLE|CMPEQ|CMPLTU|CMPLEU|ADDI)\\b"
+				},
+				{
+					"name": "keyword.other.mem-io-instructions.sisa-asm",
+					"match": "\\b(?i)(MOVI|MOVHI|LD|LDB|ST|STB|IN|OUT)\\b"
+				},
+				{
+					"name": "keyword.control.branch-instructions",
+					"match": "\\b(?i)(BZ|BNZ|JARL)\\b"
+				},
+				{
+					"name": "support.variable.register.sisa-asm",
+					"match": "[rR][0-7]"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.decimal.sisa-asm",
+					"match": "\\d+"
+				},
+				{
+					"name": "constant.numeric.hex.sisa-asm",
+					"match": "0[xX][0-9a-eA-E]+"
+				}
+			]
+		},
+		"directives": {
+			"patterns": [
+				{
+					"name": "entity.name.function.section.sisa-asm",
+					"match": "\\.(data|text|end)"
+				},
+				{
+					"name": "keyword.operator.set.sisa-asm",
+					"match": "="
+				},
+				{
+					"name": "storage.modifier.sisa-asm",
+					"match": "\\.(space|even)"
+				},
+				{
+					"name": "storage.type.sisa-asm",
+					"match": "\\.(byte|word)"
+				},
+				{
+					"name": "support.function.lohi.sisa-asm",
+					"match": "(?i)(lo|hi)"
+				},
+				{
+					"name": "comment.line.semicolon.sisa-asm",
+					"match": ";.*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.sisa-asm"
+}

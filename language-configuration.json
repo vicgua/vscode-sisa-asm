@@ -1,0 +1,13 @@
+{
+    "comments": {
+        "blockComment": [
+            "/*",
+            "*/"
+        ],
+        "lineComment": "//"
+    },
+    "indentationRules": {
+        "increaseIndentPattern": "\\.(text|data)",
+        "decreaseIndentPattern": "\\.(text|data|end)"
+    }
+}

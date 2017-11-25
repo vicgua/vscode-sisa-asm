@@ -1,0 +1,30 @@
+{
+    "name": "language-sisa-asm",
+    "displayName": "SISA ASM",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "vicgua",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "sisa-asm",
+            "aliases": ["SISA Assembly", "sisa-asm"],
+            "extensions": [".sisa"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sisa-asm",
+            "scopeName": "source.sisa-asm",
+            "path": "./syntaxes/sisa-asm.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "sisa-asm",
+            "path": "./snippets/sisa-asm.json"
+        }]
+    }
+}
